@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.tukorea.free.domain.PostVO;
 import org.tukorea.free.persistence.PostDAO;
 
+import java.util.Date;
 import java.util.List;
 
 @Qualifier("dataService")
@@ -29,6 +30,7 @@ public class DataStructurePostServiceImpl implements PostService {
 
     @Override
     public void addPost(PostVO post) throws Exception {
+        post.setPostDate(new Date());
         postDAO.add(post);
     }
 

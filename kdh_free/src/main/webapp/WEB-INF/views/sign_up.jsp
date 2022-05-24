@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DCode</title>
-    <link rel="stylesheet" href="../resources/static/views/sign_up.css" type="text/css"/>
+    <link rel="stylesheet" href="/free/resources/static/views/sign_up.css" type="text/css"/>
 </head>
 <body>
 <div style="height: 100%; background-color: #f1f1f1">

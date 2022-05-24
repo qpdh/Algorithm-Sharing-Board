@@ -1,0 +1,120 @@
+* {
+    font-family: "맑은 고딕";
+}
+
+.board_component {
+    background-color: #f1f1f1;
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.board_table {
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    width: 1200px;
+    height: 600px;
+}
+
+.board_top_menu {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-bottom: 5px solid #F1F1F1;
+}
+
+.board_list_table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.board_list_header th{
+    border-top: 5px solid #D1D1D1;
+    border-bottom: 5px solid #D1D1D1;
+    padding: 10px;
+}
+
+.board_list_table th {
+    font-size: 22px;
+    justify-content: center;
+}
+
+.board_list_table td{
+    font-size: 18px;
+    padding: 5px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.board_list_title {
+    width: 500px;
+    overflow: hidden;
+}
+
+.board_list_language {
+    width: 200px;
+    overflow: hidden;
+}
+
+.board_list_postDate {
+    width: 300px;
+    overflow: hidden;
+}
+
+.board_list_userId {
+    width: 200px;
+    overflow: hidden;
+}
+
+.board_list_td_title{
+    text-align: left;
+}
+
+.board_list_td_title>a{
+    color: black;
+    text-decoration-line: blink;
+}
+
+.board_list_td_title>a:hover{
+    text-decoration-line: underline;
+}
+
+.board_list_write_button {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 40px;
+    background-color: #1c89e9;
+
+    text-decoration-line: blink;
+    border: 0px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.board_list_write_button > a {
+    width: 40px;
+    height: 40px;
+}
+
+.board_list_write_button:hover {
+    cursor: pointer;
+    background-color: #1c89e9cc;
+}
+

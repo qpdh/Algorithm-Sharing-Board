@@ -6,8 +6,8 @@
 
 <mapper namespace="org.tukorea.free.mapper.DataStructurePostMapper">
     <insert id="insert">
-        insert into DataStructureBoard (title, description, language_id, user_id)
-        values (#{title}, #{description}, #{languageId}, #{userId})
+        insert into DataStructureBoard (title, description,postDate, language, userId)
+        values (#{title}, #{description}, #{postDate},#{language}, #{userId})
     </insert>
 
     <select id="selectById"
@@ -17,6 +17,7 @@
         select *
         from DataStructureBoard
         where id = #{id}
+
         ]]>
 	</select>
 
@@ -26,6 +27,7 @@
 	<![CDATA[
         select *
         from DataStructureBoard
+        order by id desc;
         ]]>
 	</select>
 

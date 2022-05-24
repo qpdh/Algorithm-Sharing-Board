@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>DCode</title>
-    <link rel="stylesheet" href="../resources/static/views/home.css" type="text/css"/>
+    <link rel="stylesheet" href="/free/resources/static/views/home.css" type="text/css"/>
 </head>
 <body>
 <div align="center" class="Component">

@@ -6,8 +6,8 @@
 
 <mapper namespace="org.tukorea.free.mapper.AlgorithmPostMapper">
     <insert id="insert">
-        insert into AlgorithmBoard (title, description, language_id, user_id)
-        values (#{title}, #{description}, #{languageId}, #{userId})
+        insert into AlgorithmBoard (title, description, postDate,language, userId)
+        values (#{title}, #{description},#{postDate}, #{language}, #{userId})
     </insert>
 
     <select id="selectById"
@@ -26,6 +26,7 @@
 	<![CDATA[
         select *
         from AlgorithmBoard
+        order by id desc;
         ]]>
 	</select>
 

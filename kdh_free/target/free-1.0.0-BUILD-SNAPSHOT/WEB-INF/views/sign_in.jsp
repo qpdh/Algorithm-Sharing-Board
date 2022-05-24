@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../resources/static/views/sign_in.css" type="text/css"/>
+    <link rel="stylesheet" href="/free/resources/static/views/sign_in.css" type="text/css"/>
 </head>
 <body>
 <div style="height: 100%; background-color: #f1f1f1">

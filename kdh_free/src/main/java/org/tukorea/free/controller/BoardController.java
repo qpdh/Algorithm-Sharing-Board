@@ -129,8 +129,6 @@ public class BoardController {
     @PostMapping("/{mode}/modify")
     public String postBoardModify(@PathVariable String mode, @ModelAttribute PostVO vo) throws Exception {
 
-        System.out.println(vo.toString());
-
         if (mode.equals("algo")) {
             algoPostService.updatePost(vo);
         } else if (mode.equals("data")) {
@@ -141,5 +139,20 @@ public class BoardController {
 
         return "redirect:/board/" + mode;
     }
+
     // 게시글 삭제
+    // /free/board/${mode}/delete?id=${post.id}
+    @GetMapping("/{mode}/delete")
+    public String deleteBoard(@PathVariable String mode, @RequestParam("id") int id) throws Exception {
+        if (mode.equals("algo")) {
+            algoPostService.deletePost(id);
+        } else if (mode.equals("data")) {
+            dataPostService.deletePost(id);
+        } else {
+            new Exception("");
+        }
+
+        return "redirect:/board/" + mode;
+    }
+
 }

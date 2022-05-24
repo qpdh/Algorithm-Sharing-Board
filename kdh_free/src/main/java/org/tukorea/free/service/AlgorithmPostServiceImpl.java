@@ -3,6 +3,9 @@ package org.tukorea.free.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.tukorea.free.domain.PostVO;
 import org.tukorea.free.persistence.PostDAO;
 
@@ -17,6 +20,7 @@ public class AlgorithmPostServiceImpl implements PostService {
     PostDAO postDAO;
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.SERIALIZABLE, timeout = 10)
     public PostVO readPost(Integer id) throws Exception {
         PostVO vo = postDAO.read(id);
         return vo;
@@ -29,6 +33,7 @@ public class AlgorithmPostServiceImpl implements PostService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED, timeout = 10)
     public void addPost(PostVO post) throws Exception {
         post.setPostDate(new Date());
         postDAO.add(post);

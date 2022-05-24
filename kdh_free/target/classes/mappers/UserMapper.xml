@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.tukorea.free.mapper.UserMapper">
+    <insert id="insert">
+        insert into user (id, passwd, joinDate)
+        values (#{id}, #{passwd}, #{joinDate})
+    </insert>
+
+    <insert id="insert2">
+        insert into user_role (userid,rolename)
+        values (#{id},"ROLE_USER")
+    </insert>
+
+    <select id="selectById"
+            resultType="org.tukorea.free.domain.UserVO">
+
+	<![CDATA[
+        select *
+        from User
+        where id = #{id}
+        ]]>
+	</select>
+
+    <select id="selectAll"
+            resultType="org.tukorea.free.domain.UserVO">
+
+	<![CDATA[
+        select *
+        from User
+        ]]>
+	</select>
+
+    <update id="update">
+        update User
+        set passwd=#{passwd},
+            id  = #{id}
+        where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete
+        from User
+        where id = #{id}
+    </delete>
+
+
+</mapper>

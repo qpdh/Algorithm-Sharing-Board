@@ -1,0 +1,91 @@
+* {
+    font-family: "맑은 고딕";
+}
+
+.top_menu_component {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding-bottom: 4rem;
+    justify-content: center;
+}
+
+.top_menu_menu_div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /*margin-bottom: 4rem;*/
+    align-items: center;
+
+    flex: 1;
+}
+
+.top_menu_category {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+
+    height: 50px;
+
+    justify-content: center;
+    display: flex;
+
+    flex-direction: row;
+
+    margin-right: 2rem;
+}
+
+.top_menu_category > a {
+    width: 200px;
+    margin: 10px;
+    height: 50px;
+
+    color: #999999;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration-line: blink;
+}
+
+.top_menu_auth_div {
+    display: flex;
+
+    align-items: center;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+
+    height: 50px;
+}
+
+.top_menu_auth_div > a {
+    color: #999999;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration-line: blink;
+
+    margin-right: 1rem;
+    height: auto;
+}
+
+.top_menu_auth_div > form {
+    height: 30px;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.top_menu_auth_div > form > button {
+    color: #999999;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration-line: blink;
+    background-color: white;
+    color: indianred;
+    border: 0;
+    outline: 0;
+}
+

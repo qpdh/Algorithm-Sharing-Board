@@ -8,9 +8,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html>
@@ -38,7 +35,7 @@
 
             <sec:authorize access="isAuthenticated()">
                 <sec:authentication property="principal.username" var="user_id"/>
-                <a href="/free/user_detail/${user_id}"><img src="/free/resources/static/images/user-icon.png"
+                <a href="/free/user/detail"><img src="/free/resources/static/images/user-icon.png"
                                                             width="40px"
                                                             height="40px"/></a>
                 <form action="/free/logout" method="post">

@@ -1,0 +1,135 @@
+* {
+    font-family: "맑은 고딕";
+}
+
+.board_view {
+    background-color: #f1f1f1;
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.board_view_component {
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    width: 1000px;
+    height: 600px;
+}
+
+.board_view_top {
+    position: relative;
+    width: 830px;
+
+    border-bottom: 4px solid #e1e1e1;
+
+    margin-bottom: 10px;
+}
+
+.board_view_top_sub {
+    display: flex;
+}
+
+.board_view_post_date {
+    position: absolute;
+    right: 0;
+}
+
+.board_view_top {
+    text-align: left;
+    font-size: 16px;
+}
+
+.board_view_description {
+    text-align: left;
+    width: 800px;
+    height: 300px;
+    border-radius: 30px;
+    border: 0px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #000000;
+
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.board_view_back{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.board_view_delete {
+    width: 200px;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #FC7070;
+
+    text-decoration-line: blink;
+    border: 0px;
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    margin-right: 20px;
+}
+
+.board_view_delete:hover {
+    background-color: #FC7070cc;
+}
+
+.board_view_delete>a{
+    height: 100%;
+    text-decoration-line: blink;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.board_view_modify{
+    display: flex;
+    width: 200px;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #1CB8E9;
+
+    text-decoration-line: blink;
+    border: 0px;
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    margin-right: 20px;
+
+    align-content: center;
+    justify-content: center;
+}
+
+.board_view_modify>a{
+    height: 100%;
+    text-decoration-line: blink;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.board_view_modify:hover {
+    background-color: #1CB8E9cc;
+}

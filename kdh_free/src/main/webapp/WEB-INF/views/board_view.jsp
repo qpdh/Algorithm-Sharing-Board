@@ -9,42 +9,53 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>DCode</title>
+    <link rel="stylesheet" href="/free/resources/static/views/board_view.css" type="text/css"/>
 </head>
 <body>
 <div style="height: 100%; background-color: #f1f1f1">
     <jsp:include page="components/top_menu.jsp"/>
-    <div align=center>
-        <header>${mode}</header>
-        <br>
-        <table>
-            <tr>
-                <th>Title</th>
-                <td><c:out value="${post.title}"/></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td><c:out value="${post.description}"/></td>
-            </tr>
-            <tr>
-                <th>Language</th>
-                <td><c:out value="${post.language}"/></td>
-            </tr>
-            <tr>
-                <th>PostDate</th>
-                <td><c:out value="${post.postDate}"/></td>
-            </tr>
-            <tr>
-                <th>UserId</th>
-                <td><c:out value="${post.userId}"/></td>
-            </tr>
-        </table>
-        <a href="/free/board/${mode}">Go To List</a>
-        <c:if test="${viewer == post.userId}">
-            <form action="/free/board/${mode}" method="delete">
-                <button>Delete This Post</button>
-            </form>
-        </c:if>
+    <div class="board_view" align=center>
+        <div class="board_view_component">
+            <h1>${mode}</h1>
+
+            <div class="board_view_top">
+                <div class="board_view_top_title">
+                    <h2>
+                        <c:out value="${post.title}"/>
+                    </h2>
+                </div>
+
+                <div class="board_view_top_sub">
+                    <c:out value="${post.userId}"/> |
+
+                    <c:out value="${post.language}"/>
+
+                    <div class="board_view_post_date">
+                        <c:out value="${post.postDate}"/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="board_view_description">
+                <c:out value="${post.description}"/>
+            </div>
+
+            <div class="board_view_back"><a href="/free/board/${mode}"><img
+                    src="/free/resources/static/images/arrow-back-icon.png" width="40px" height="40px"/></a></div>
+
+            <c:if test="${viewer == post.userId}">
+                <div style="display: flex">
+                    <div class="board_view_modify">
+                        <a href="/free/board/${mode}/modify?id${post.id}">Modify</a>
+                    </div>
+
+                    <div class="board_view_delete">
+                        <a href="/free/board/${mode}/delete?id${post.id}">Delete</a>
+                    </div>
+                </div>
+            </c:if>
+        </div>
     </div>
 </div>
 </body>

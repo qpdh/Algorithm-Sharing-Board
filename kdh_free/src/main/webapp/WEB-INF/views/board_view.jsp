@@ -47,11 +47,11 @@
             <c:if test="${viewer == post.userId}">
                 <div style="display: flex">
                     <div class="board_view_modify">
-                        <a href="/free/board/${mode}/modify?id${post.id}">Modify</a>
+                        <a href="/free/board/${mode}/modify?id=${post.id}">Modify</a>
                     </div>
 
                     <div class="board_view_delete">
-                        <a href="/free/board/${mode}/delete?id${post.id}">Delete</a>
+                        <a href="/free/board/${mode}/delete?id=${post.id}">Delete</a>
                     </div>
                 </div>
             </c:if>

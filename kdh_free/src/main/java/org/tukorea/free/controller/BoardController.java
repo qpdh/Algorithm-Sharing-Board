@@ -107,4 +107,39 @@ public class BoardController {
 
         return "board_view";
     }
+
+    // 게시글 수정
+    @GetMapping("/{mode}/modify")
+    public String getBoardModify(@PathVariable String mode, @RequestParam("id") int id, Model model) throws Exception {
+        PostVO vo = null;
+        if (mode.equals("algo")) {
+            vo = algoPostService.readPost(id);
+        } else if (mode.equals("data")) {
+            vo = dataPostService.readPost(id);
+        } else {
+            new Exception("");
+        }
+
+        model.addAttribute("post", vo);
+
+        return "board_modify";
+    }
+
+    // 게시글 수정 POST
+    @PostMapping("/{mode}/modify")
+    public String postBoardModify(@PathVariable String mode, @ModelAttribute PostVO vo) throws Exception {
+
+        System.out.println(vo.toString());
+
+        if (mode.equals("algo")) {
+            algoPostService.updatePost(vo);
+        } else if (mode.equals("data")) {
+            dataPostService.updatePost(vo);
+        } else {
+            new Exception("");
+        }
+
+        return "redirect:/board/" + mode;
+    }
+    // 게시글 삭제
 }

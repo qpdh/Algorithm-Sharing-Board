@@ -35,4 +35,12 @@ public class DataStructureServiceTest {
             logger.info(vo.toString());
         }
     }
+
+    @Test
+    public void 게시글_수정() throws Exception{
+        PostVO postVO = postService.readPost(1);
+        postVO.setTitle("수정된 타이틀");
+        postService.updatePost(postVO);
+        logger.info(postService.readPost(1).toString());
+    }
 }

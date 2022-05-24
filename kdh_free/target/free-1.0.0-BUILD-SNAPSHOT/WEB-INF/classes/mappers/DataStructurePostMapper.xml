@@ -35,7 +35,7 @@
         update DataStructureBoard
         set title=#{title},
             description = #{description},
-            language_id=#{languageId}
+            language=#{language}
         where id = #{id}
     </update>
 

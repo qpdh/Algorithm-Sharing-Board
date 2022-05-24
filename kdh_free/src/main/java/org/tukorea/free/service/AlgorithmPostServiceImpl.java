@@ -35,6 +35,11 @@ public class AlgorithmPostServiceImpl implements PostService {
     }
 
     @Override
+    public void updatePost(PostVO postVO) throws Exception {
+        postDAO.update(postVO);
+    }
+
+    @Override
     public void deletePost(Integer id) throws Exception {
         postDAO.delete(id);
     }

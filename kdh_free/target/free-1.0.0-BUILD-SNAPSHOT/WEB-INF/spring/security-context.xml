@@ -53,8 +53,8 @@
         <security:authentication-provider>
             <security:jdbc-user-service
                     data-source-ref="dataSource"
-                    users-by-username-query="select id, passwd, true from user where id = ?"
-                    authorities-by-username-query="select userid, rolename from user_role where userid = ?"
+                    users-by-username-query="select id, passwd, true from user_free where id = ?"
+                    authorities-by-username-query="select userid, rolename from user_role_free where userid = ?"
             />
             <security:password-encoder ref="NoOpPasswordEncoder"/>
         </security:authentication-provider>

@@ -23,7 +23,7 @@
             <%--        <c:remove var="SPRING_SECURITY_LAST_EXCEPTION" scope="session"/>--%>
             <%--    </c:if>--%>
 
-            <form class="sign_up_form" action="/free/auth/enroll" method="POST">
+            <form class="sign_up_form" action="/free/auth/sign_up" method="POST">
                 <label><img src="../resources/static/images/user-icon.png" width="40px" height="40px"
                             alt="user.png"/><input type="text" name="id" placeholder="Enter the ID"/></label>
                 <label><img src="../resources/static/images/password-icon.png" width="40px" height="40px"

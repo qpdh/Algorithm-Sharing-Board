@@ -34,7 +34,7 @@
                     <input class="sing_in_login" type="submit" value="SIGN IN"/>
                 </div>
             </form>
-            <a class="sign_in_enroll" href="/free/auth/enroll">SIGN UP</a>
+            <a class="sign_in_enroll" href="/free/auth/sign_up">SIGN UP</a>
         </div>
     </div>
 

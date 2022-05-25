@@ -40,6 +40,6 @@ public class AuthController {
 
         System.out.println("RESPONSE from postEnrolUser : " + response);
 
-        return "redirect:/auth/sign_up";
+        return "redirect:/auth/sign_in";
     }
 }

@@ -10,7 +10,7 @@
             resultType="org.tukorea.free.domain.LanguageVO">
 
 	<![CDATA[
-        select * from language where language = #{language}
+        select * from language_free where language = #{language}
         ]]>
 	</select>
 
@@ -18,7 +18,7 @@
             resultType="org.tukorea.free.domain.LanguageVO">
 
 	<![CDATA[
-        select * from language
+        select * from language_free
         ]]>
 	</select>
 

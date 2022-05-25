@@ -6,7 +6,7 @@
 
 <mapper namespace="org.tukorea.free.mapper.DataStructurePostMapper">
     <insert id="insert">
-        insert into DataStructureBoard (title, description,postDate, language, userId)
+        insert into DataStructureBoard_free (title, description,postDate, language, userId)
         values (#{title}, #{description}, #{postDate},#{language}, #{userId})
     </insert>
 
@@ -15,7 +15,7 @@
 
 	<![CDATA[
         select *
-        from DataStructureBoard
+        from DataStructureBoard_free
         where id = #{id}
 
         ]]>
@@ -26,13 +26,13 @@
 
 	<![CDATA[
         select *
-        from DataStructureBoard
+        from DataStructureBoard_free
         order by id desc;
         ]]>
 	</select>
 
     <update id="update">
-        update DataStructureBoard
+        update DataStructureBoard_free
         set title=#{title},
             description = #{description},
             language=#{language}
@@ -41,7 +41,7 @@
 
     <delete id="delete">
         delete
-        from DataStructureBoard
+        from DataStructureBoard_free
         where id = #{id}
     </delete>
 

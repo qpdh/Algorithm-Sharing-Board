@@ -6,8 +6,8 @@
 
 <mapper namespace="org.tukorea.free.mapper.AlgorithmPostMapper">
     <insert id="insert">
-        insert into AlgorithmBoard (title, description, postDate,language, userId)
-        values (#{title}, #{description},#{postDate}, #{language}, #{userId})
+        insert into AlgorithmBoard_free (title, description, postDate, language, userId)
+        values (#{title}, #{description}, #{postDate}, #{language}, #{userId})
     </insert>
 
     <select id="selectById"
@@ -15,7 +15,7 @@
 
 	<![CDATA[
         select *
-        from AlgorithmBoard
+        from AlgorithmBoard_free
         where id = #{id}
         ]]>
 	</select>
@@ -25,13 +25,13 @@
 
 	<![CDATA[
         select *
-        from AlgorithmBoard
+        from AlgorithmBoard_free
         order by id desc;
         ]]>
 	</select>
 
     <update id="update">
-        update AlgorithmBoard
+        update AlgorithmBoard_free
         set title=#{title},
             description = #{description},
             language=#{language}
@@ -40,7 +40,7 @@
 
     <delete id="delete">
         delete
-        from AlgorithmBoard
+        from AlgorithmBoard_free
         where id = #{id}
     </delete>
 

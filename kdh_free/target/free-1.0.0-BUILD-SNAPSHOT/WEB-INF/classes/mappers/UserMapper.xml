@@ -6,12 +6,12 @@
 
 <mapper namespace="org.tukorea.free.mapper.UserMapper">
     <insert id="insert">
-        insert into user (id, passwd, joinDate)
+        insert into user_free (id, passwd, joinDate)
         values (#{id}, #{passwd}, #{joinDate})
     </insert>
 
     <insert id="insert2">
-        insert into user_role (userid,rolename)
+        insert into user_role_free (userid,rolename)
         values (#{id},"ROLE_USER")
     </insert>
 
@@ -20,7 +20,7 @@
 
 	<![CDATA[
         select *
-        from User
+        from User_free
         where id = #{id}
         ]]>
 	</select>
@@ -30,12 +30,12 @@
 
 	<![CDATA[
         select *
-        from User
+        from User_free
         ]]>
 	</select>
 
     <update id="update">
-        update User
+        update User_free
         set passwd=#{passwd},
             id  = #{id}
         where id = #{id}
@@ -43,7 +43,7 @@
 
     <delete id="delete">
         delete
-        from User
+        from User_free
         where id = #{id}
     </delete>
 

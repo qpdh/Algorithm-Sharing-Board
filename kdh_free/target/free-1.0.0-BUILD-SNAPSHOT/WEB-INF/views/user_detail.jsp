@@ -15,19 +15,18 @@
 <body>
 <div style="height: 100%; background-color: #f1f1f1">
     <jsp:include page="components/top_menu.jsp"/>
-    <div align=center>
-        <header>학생 정보</header>
-        <br>
-        <table>
-            <tr>
-                <th>LoginID</th>
-                <td><c:out value="${user.id}"/></td>
-            </tr>
-            <tr>
-                <th>JoinDate</th>
-                <td><c:out value="${user.joinDate}"/></td>
-            </tr>
-        </table>
+    <div class="user_detail" align=center>
+        <div class="user_detail_component">
+            <h1>User Detail</h1>
+            <h2>USER_ID</h2>
+            <p>
+                <c:out value="${user.id}"/>
+            </p>
+            <h2>USER_JOINDATE</h2>
+            <p>
+                <c:out value="${user.joinDate}"/>
+            </p>
+        </div>
     </div>
 </div>
 </body>

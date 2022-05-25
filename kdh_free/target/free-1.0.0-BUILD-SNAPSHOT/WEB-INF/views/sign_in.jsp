@@ -11,7 +11,7 @@
     <div class="sign_in_component">
 
         <div class="sign_in_login">
-            <H2>로그인</H2>
+            <H2>SIGN IN</H2>
 
             <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
                 로그인 에러입니다.<br>
@@ -25,10 +25,10 @@
                     <label><img src="../resources/static/images/user-icon.png" width="40px" height="40px"
                                 alt="user.png"/><input class="sign_in_input"
                                                        type="text" name="paramLoginId"
-                                                       placeholder="아이디를 입력해주세요."/></label>
+                                                       placeholder="Enter the ID"/></label>
                     <label><img src="../resources/static/images/password-icon.png" width="40px" height="40px"
                                 alt="user.png"/><input class="sign_in_input"
-                                                       type="password" name="paramPassword" placeholder="비밀번호를 입력해주세요"/></label>
+                                                       type="password" name="paramPassword" placeholder="Enter the PW"/></label>
                 </div>
                 <div>
                     <input class="sing_in_login" type="submit" value="로그인"/>

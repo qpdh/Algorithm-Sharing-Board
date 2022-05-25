@@ -8,6 +8,7 @@
 <head>
     <title>DCode</title>
     <link rel="stylesheet" href="/free/resources/static/views/home.css" type="text/css"/>
+
 </head>
 <body>
 <div align="center" class="Component">
@@ -18,12 +19,11 @@
         </h1>
 
         <P> The time on the server is ${serverTime}. </P>
-        <a href="/free/auth/sign_up">회원가입</a>
-        <a href="/free/auth/sign_in">로그인</a>
-        <form action="logout" method="post">
-            <button>로그아웃</button>
-        </form>
+        <aside id="markdown" contenteditable style="display:none">
+
+        </aside>
+        <section id="output-html" style="text-align: left"></section>
+        <script type="text/javascript" src="/free/resources/static/markdown.js"></script>
     </div>
-</div>
 </body>
 </html>

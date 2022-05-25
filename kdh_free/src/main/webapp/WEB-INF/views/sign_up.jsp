@@ -14,7 +14,7 @@
     <div class="sign_up_component">
 
         <div class="sign_up_enroll">
-            <H2>회원가입</H2>
+            <H2>SIGN UP</H2>
 
             <%--    <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">--%>
             <%--        로그인 에러입니다.<br>--%>
@@ -25,9 +25,9 @@
 
             <form class="sign_up_form" action="/free/auth/enroll" method="POST">
                 <label><img src="../resources/static/images/user-icon.png" width="40px" height="40px"
-                            alt="user.png"/><input type="text" name="id" placeholder="아이디를 입력해주세요."/></label>
+                            alt="user.png"/><input type="text" name="id" placeholder="Enter the ID"/></label>
                 <label><img src="../resources/static/images/password-icon.png" width="40px" height="40px"
-                            alt="user.png"/><input type="password" name="passwd" placeholder="비밀번호를 입력해주세요."/></label>
+                            alt="user.png"/><input type="password" name="passwd" placeholder="Enter the PW"/></label>
                 <input class="sing_up_enroll_button" type="submit" value="회원가입"/>
             </form>
         </div>

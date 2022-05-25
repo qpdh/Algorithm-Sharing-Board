@@ -23,7 +23,7 @@
     padding: 20px;
     background-color: #FFFFFF;
     width: 1000px;
-    height: 600px;
+    height: auto;
 }
 
 .board_view_top {
@@ -52,7 +52,7 @@
 .board_view_description {
     text-align: left;
     width: 800px;
-    height: 300px;
+    min-height: 300px;
     border-radius: 30px;
     border: 0px;
     font-size: 16px;

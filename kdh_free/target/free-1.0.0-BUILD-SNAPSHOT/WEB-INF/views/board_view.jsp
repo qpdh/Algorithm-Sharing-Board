@@ -38,7 +38,10 @@
 
             </div>
             <div class="board_view_description">
-                <c:out value="${post.description}"/>
+                <aside id="markdown" contenteditable style="display:none"><c:out value="${post.description}"/></aside>
+                <section id="output-html" style="text-align: left"></section>
+                <script type="text/javascript" src="/free/resources/static/markdown.js"></script>
+
             </div>
 
             <div class="board_view_back"><a href="/free/board/${mode}"><img

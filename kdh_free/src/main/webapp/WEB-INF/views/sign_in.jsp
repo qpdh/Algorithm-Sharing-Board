@@ -31,12 +31,14 @@
                                                        type="password" name="paramPassword" placeholder="Enter the PW"/></label>
                 </div>
                 <div>
-                    <input class="sing_in_login" type="submit" value="로그인"/>
+                    <input class="sing_in_login" type="submit" value="SIGN IN"/>
                 </div>
             </form>
-            <a class="sign_in_enroll" href="/free/auth/enroll">회원가입</a>
+            <a class="sign_in_enroll" href="/free/auth/enroll">SIGN UP</a>
         </div>
     </div>
+
 </div>
+<jsp:include page="components/footer.jsp"/>
 </body>
 </html>

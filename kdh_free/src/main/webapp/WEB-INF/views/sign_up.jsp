@@ -28,11 +28,13 @@
                             alt="user.png"/><input type="text" name="id" placeholder="Enter the ID"/></label>
                 <label><img src="../resources/static/images/password-icon.png" width="40px" height="40px"
                             alt="user.png"/><input type="password" name="passwd" placeholder="Enter the PW"/></label>
-                <input class="sing_up_enroll_button" type="submit" value="회원가입"/>
+                <input class="sing_up_enroll_button" type="submit" value="SIGN UP"/>
             </form>
         </div>
 
     </div>
+
 </div>
+<jsp:include page="components/footer.jsp"/>
 </body>
 </html>

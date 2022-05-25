@@ -11,19 +11,19 @@
 
 </head>
 <body>
-<div align="center" class="Component">
+<div style="height: 100%; background-color: #f1f1f1;">
     <jsp:include page="components/top_menu.jsp"/>
-    <div>
-        <h1>
-            Hello world!
-        </h1>
+    <div align="center" class="home">
+        <div class="home_component">
+            <h1>
+                Welcome DCode!
+            </h1>
 
-        <P> The time on the server is ${serverTime}. </P>
-        <aside id="markdown" contenteditable style="display:none">
-
-        </aside>
-        <section id="output-html" style="text-align: left"></section>
-        <script type="text/javascript" src="/free/resources/static/markdown.js"></script>
+            <a href="https://www.youngwonks.com/blog/What-is-an-Algorithm-and-What-are-the-Different-Types-of-Algorithms"
+               target="_blank"><img src="/free/resources/static/images/what-is-algorithm.png"/></a>
+        </div>
     </div>
+    <jsp:include page="components/footer.jsp"/>
+</div>
 </body>
 </html>

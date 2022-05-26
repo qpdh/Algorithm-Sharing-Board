@@ -1,6 +1,7 @@
 package org.tukorea.free.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.tukorea.free.domain.UserVO;
 import org.tukorea.free.persistence.UserDAO;
@@ -24,6 +25,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(UserVO user) throws Exception {
+        String password = user.getPasswd();
+
+        // 디비에 저장할 비밀번호 암호화
+        String encrypted = BCrypt.hashpw(password, BCrypt.gensalt());
+
+        user.setPasswd(encrypted);
+
         userDAO.add(user);
     }
 

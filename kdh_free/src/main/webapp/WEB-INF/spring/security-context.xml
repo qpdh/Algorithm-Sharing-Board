@@ -8,10 +8,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 
-    <!--
-        <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
-    -->
-    <bean id="NoOpPasswordEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder"></bean>
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+
+    <!--    <bean id="NoOpPasswordEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder"></bean>-->
 
     <security:http>
         <security:intercept-url pattern="/" access="permitAll()"/>
@@ -56,7 +55,7 @@
                     users-by-username-query="select id, passwd, true from user_free where id = ?"
                     authorities-by-username-query="select userid, rolename from user_role_free where userid = ?"
             />
-            <security:password-encoder ref="NoOpPasswordEncoder"/>
+            <security:password-encoder ref="passwordEncoder"/>
         </security:authentication-provider>
     </security:authentication-manager>
 
